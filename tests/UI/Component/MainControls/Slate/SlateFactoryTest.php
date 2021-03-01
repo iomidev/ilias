@@ -3,7 +3,7 @@
 require_once 'tests/UI/AbstractFactoryTest.php';
 
 /**
- * Tests on factory implementation for Slates
+ * Tests on factory implementation for Slate
  *
  * @author Nils Haagen <nhaagen@concepts-and-training.de>
  */

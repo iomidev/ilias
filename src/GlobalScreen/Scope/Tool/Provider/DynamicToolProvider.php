@@ -17,7 +17,7 @@ interface DynamicToolProvider extends Provider, ScreenContextAwareProvider
     /**
      * @param CalledContexts $called_contexts
      *
-     * @return Tool[] These Slates
+     * @return Tool[] These Slate
      * can be passed to the MainMenu dynamic for a specific location/context.
      * @see DynamicProvider
      */

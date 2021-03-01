@@ -43,15 +43,15 @@ interface Factory
      * description:
      *   purpose: >
      *     The Combined Slate bundles related controls; these can also be further
-     *     Slates. Combined Slates are used when a specific purpose is being
+     *     Slate. Combined Slate are used when a specific purpose is being
      *     subdivided into further aspects.
      *   composition: >
-     *     The Combined Slate consists of more Slates and/or Bulky Buttons
+     *     The Combined Slate consists of more Slate and/or Bulky Buttons
      *     and/or Horizontal Deviders.
-     *     The symbol and name of contained Slates are turned into a Bulky Button
+     *     The symbol and name of contained Slate are turned into a Bulky Button
      *     to control opening and closing the contained Slate.
      *   effect: >
-     *     Opening a Combined Slate will display its contained Slates with an
+     *     Opening a Combined Slate will display its contained Slate with an
      *     operating Bulky Button for closing/expanding.
      *     Clicking on a Button not connected to a Slate will carry out its action.
      * context:
@@ -70,26 +70,26 @@ interface Factory
      * ---
      * description:
      *   purpose: >
-     *     Notifications Slates are used by the system to publish information to
+     *     Notifications Slate are used by the system to publish information to
      *     the user in the form of Notification Items. The aim of the Notification
-     *     Slates and the Notification Items they contain, is to make notifications
+     *     Slate and the Notification Items they contain, is to make notifications
      *     visible and quickly accessible. They form a centralized channel which bundles notifications.
-     *     Note that the Notification Slates
+     *     Note that the Notification Slate
      *     and Items do not replace the short-lived message displayed on the screen without
      *     page loading (like "You have received 1 Contact Request") currently called "toasts".
      *   composition: >
-     *     Notifications Slates hold Notification Items, displaying information
+     *     Notifications Slate hold Notification Items, displaying information
      *     on and possible interactions with the displayed notifications. They
      *     display the Notification Items chronological order (with the latest on top).
      *     Each Notification Slate bundles Notification Items of one specific
      *     type of source (service, e.g. Mail).
      *   effect: >
-     *     By default Notification Slates are engaged, meaning, they display
+     *     By default Notification Slate are engaged, meaning, they display
      *     there content to the user.
      *   rivals:
-     *      Combined Slates: >
-     *          Combined Slates can hold Bulky Links and other Slates, Notification
-     *          Slates may only contain Notification Items. Further Combined Slates
+     *      Combined Slate: >
+     *          Combined Slate can hold Bulky Links and other Slate, Notification
+     *          Slate may only contain Notification Items. Further Combined Slate
      *          always require an icon and the contained slates are by default dis-engaged.
      *      Item Group: >
      *          Item Groups bundle any kind of Items, may hold actions on those
@@ -113,7 +113,7 @@ interface Factory
      *          Each Notification Slate MUST bundle Notification Items of one
      *          specific type of source (service, e.g. Mail).
      *     2: >
-     *          Notification Slates MUST NOT be empty.
+     *          Notification Slate MUST NOT be empty.
      *   ordering:
      *       1: >
      *          Notification Items displayed inside the Notification Slate MUST

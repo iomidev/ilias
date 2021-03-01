@@ -78,7 +78,7 @@ interface Factory
      *       inform the user if the entry is engaged or disengaged at the moment.
      *     3: Bulky Buttons in the Meta Bar MUST bear the "aria-haspopup" attribute.
      *     4: Bulky Buttons in the Meta Bar MUST bear the ARIA role "menuitem".
-     *     5: Slates in the Meta Bar MUST bear the ARIA role "menu".
+     *     5: Slate in the Meta Bar MUST bear the ARIA role "menu".
      * ----
      *
      * @return  \ILIAS\UI\Component\MainControls\MetaBar
@@ -117,7 +117,7 @@ interface Factory
      *     but rather in form of a link than a widget.
      *
      *   composition: >
-     *     The Main Bar holds Slates and Bulky Buttons.
+     *     The Main Bar holds Slate and Bulky Buttons.
      *
      *     In a desktop environment, a vertical bar is rendered on the left side
      *     of the screen covering the full height (minus header- and footer area).
@@ -151,7 +151,7 @@ interface Factory
      *
      *     The slates height equals that of the Main Bar. Also, their position will
      *     remain fixed when the page is scrolled. A button to close a slate is
-     *     rendered underneath the slate. It will close all visible Slates and reset
+     *     rendered underneath the slate. It will close all visible Slate and reset
      *     the states of all Main Bar-entries.
      *
      *     When a tool (such as the help), whose contents are displayed in a slate,
@@ -191,7 +191,7 @@ interface Factory
      *       a "second screen" to the content-part of the Page.
      *
      *   composition:
-     *     1: The bar MUST NOT contain items other than Bulky Buttons or Slates.
+     *     1: The bar MUST NOT contain items other than Bulky Buttons or Slate.
      *     2: The bar MUST contain at least one Entry.
      *     3: The bar SHOULD NOT contain more than five Entries.
      *     4: The bar SHOULD NOT contain more than five Tool-Entries.
@@ -223,7 +223,7 @@ interface Factory
      *        inform the user if the entry is engaged or disengaged at the moment.
      *     5: Bulky Buttons in the Main Bar MUST bear the "aria-haspopup" attribute.
      *     6: Bulky Buttons in the Main Bar MUST bear the ARIA role "menuitem".
-     *     7: Slates in the Main Bar MUST bear the ARIA role "menu".
+     *     7: Slate in the Main Bar MUST bear the ARIA role "menu".
      * ----
      * @return  \ILIAS\UI\Component\MainControls\MainBar
      */
@@ -236,14 +236,14 @@ interface Factory
      *   purpose: >
      *     A Slate is a collection of Components that serve a specific and singular
      *     purpose in their entirety. The purpose can be subsummed in one Icon/Glyph
-     *     and a very short label, for Slates will act as elaboration on one specific
+     *     and a very short label, for Slate will act as elaboration on one specific
      *     concept in ILIAS.
      *
-     *     Slates are not part of the content and will reside next to or over it. They
+     *     Slate are not part of the content and will reside next to or over it. They
      *     will open and close without changing the current context.
-     *     Accordingly, Slates depend on a component that toggles their visibility.
+     *     Accordingly, Slate depend on a component that toggles their visibility.
      *
-     *     In contrast to purely receptive components, Slates usually provide a form
+     *     In contrast to purely receptive components, Slate usually provide a form
      *     of interaction, whereas this interaction may trigger a navigation or alter
      *     the contents of the slate itself. However, slates are not meant to modify
      *     states of entities in the system in any way.
@@ -258,7 +258,7 @@ interface Factory
      *     or a change in the online status of another learner.
      *
      *   composition: >
-     *     Slates may hold a variety of components. These can be navigational entries,
+     *     Slate may hold a variety of components. These can be navigational entries,
      *     text and images or even other slates. When content-length exceeds the Slate's
      *     height, the contents will start scrolling vertically with a scrollbar on the
      *     right.
@@ -280,20 +280,20 @@ interface Factory
      *     1: It MUST be possible to subsume a slates purpose in one Icon/Glyph and one word.
      *
      *   usage:
-     *     1: Slates MUST NOT be used standalone, i.e. without a controlling Component.
+     *     1: Slate MUST NOT be used standalone, i.e. without a controlling Component.
      *     2: There MUST be only one Slate visible at the same time per triggering Component.
      *     3: Elements in the Slate MUST NOT modify entities in the system.
-     *     4: Slates MUST be closeable/expandable without changing context.
+     *     4: Slate MUST be closeable/expandable without changing context.
      *     5: >
-     *        Slates MUST NOT be used to provide additional information of content-objects
+     *        Slate MUST NOT be used to provide additional information of content-objects
      *        that cannot be found anywhere else.
      *
      *   style:
-     *     1: Slates MUST have a fixed width.
-     *     2: Slates MUST NOT use horizontal scrollbars.
-     *     3: Slates SHOULD NOT use vertical scrollbars.
-     *     4: Slates MUST visually relate to their triggering Component.
-     *     5: Slates SHOULD NOT be affected by scrolling the page.
+     *     1: Slate MUST have a fixed width.
+     *     2: Slate MUST NOT use horizontal scrollbars.
+     *     3: Slate SHOULD NOT use vertical scrollbars.
+     *     4: Slate MUST visually relate to their triggering Component.
+     *     5: Slate SHOULD NOT be affected by scrolling the page.
      *
      *   accessibility:
      *     1: The Slate MUST be closeable by only using the keyboard

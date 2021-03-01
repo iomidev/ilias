@@ -51,7 +51,7 @@ class MainMenuItemFactory
 
 
     /**
-     * Returns you s GlobalScreen Link which can be added to Slates.
+     * Returns you s GlobalScreen Link which can be added to Slate.
      *
      * @param IdentificationInterface $identification
      *

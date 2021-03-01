@@ -151,9 +151,9 @@ interface Factory
      *      Slate: >
      *        Secondary Panels are used to present secondary information or content that should appear in combination with the current
      *        center content.
-     *        Other than the Slates in the Mainbar and the Metabar, the Secondary Panel always relates to some specific context
+     *        Other than the Slate in the Mainbar and the Metabar, the Secondary Panel always relates to some specific context
      *        indicated by the title of the current screen. Note that the slates in the tools of the Mainbar may have a very similar
-     *        context-based characteristic. The difference between Slates, Tools and Secondary Panels currently is blurry and needs
+     *        context-based characteristic. The difference between Slate, Tools and Secondary Panels currently is blurry and needs
      *        to be defined more rigorously in the future.
      *
      * rules:

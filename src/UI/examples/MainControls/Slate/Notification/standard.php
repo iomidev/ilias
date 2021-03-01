@@ -62,7 +62,7 @@ function standard()
                                        ->withProperties(["Property 1" => "Content 1", "Property 2" => "Content 2"])
                                        ->withAggregateNotifications([$generic_item1, $generic_item1]);
 
-    //Now, one could fill the Notification Slates for those 3 Services (normally done by global screen)
+    //Now, one could fill the Notification Slate for those 3 Services (normally done by global screen)
     $mail_slate = $f->mainControls()->slate()->notification("Mail", [$mail_notification_item]);
     $badge_slate = $f->mainControls()->slate()->notification("Badge", [$badge_notification_item1, $badge_notification_item2]);
     $generic_slate = $f->mainControls()->slate()->notification("Generic", [

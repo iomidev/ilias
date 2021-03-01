@@ -62,7 +62,7 @@ interface Slate extends Component, JavaScriptBindable, Triggerer
     public function appendOnInView(Signal $signal) : Slate;
 
     /**
-     * Slates in the mainbar need to be adressable via JS, a.o. for storing
+     * Slate in the mainbar need to be adressable via JS, a.o. for storing
      * current activation states or triggering them from the outside.
      */
     public function withMainBarTreePosition(string $tree_pos);

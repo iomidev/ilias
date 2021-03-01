@@ -16,7 +16,7 @@ interface StaticMainMenuProvider extends StaticProvider, MainMenuProviderInterfa
 {
 
     /**
-     * @return TopParentItem[] These are Slates which will be
+     * @return TopParentItem[] These are Slate which will be
      * available for configuration.
      */
     public function getStaticTopItems() : array;

@@ -508,7 +508,7 @@ class ilGlobalPageTemplate implements ilGlobalTemplateInterface
      */
     public function setLeftNavContent($a_content)
     {
-        // Nothing to do, this should be handled in Slates later
+        // Nothing to do, this should be handled in Slate later
     }
 
 

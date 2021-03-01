@@ -6,7 +6,7 @@ namespace ILIAS\UI\Component\MainControls\Slate;
 use \ILIAS\UI\Component\Item\Notification as NotificationItem;
 
 /**
- * Notifications Slates are Slates restricted to only containing Notification Items
+ * Notifications Slate are Slate restricted to only containing Notification Items
  */
 interface Notification extends Slate
 {

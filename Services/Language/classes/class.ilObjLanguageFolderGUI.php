@@ -63,9 +63,11 @@ class ilObjLanguageFolderGUI extends ilObjectGUI
 
                 /* IOANNA */
                 $detect = ilLinkButton::getInstance();
-                //$detect->setUrl($this->ctrl->getLinkTarget($this, "enableLanguageDetection"));
-                $detect->setCaption($this->toogleButtonAutomatLangDetection("disableLanguageDetection", "enableLanguageDetection"));
+                $detect->setCaption('Test'/*$this->toogleButtonAutomatLangDetection("disableLanguageDetection", "enableLanguageDetection")*/);
                 $this->toolbar->addButtonInstance($detect);
+
+                $this->toolbar->addText($this->toogleButtonAutomatLangDetection("disableLanguageDetection", "enableLanguageDetection"), true);
+
 
 
             } else {
@@ -81,14 +83,69 @@ class ilObjLanguageFolderGUI extends ilObjectGUI
                 $this->toolbar->addButtonInstance($detect);
                 */
 
+                $detect = ilLinkButton::getInstance();
+                /*$detect->setCaption('Test'$this->toogleButtonAutomatLangDetection( "enableLanguageDetection", "disableLanguageDetection"));*/
+                $this->toolbar->addButtonInstance($detect);
+
+                $this->toolbar->addText($this->toogleButtonAutomatLangDetection( "enableLanguageDetection", "disableLanguageDetection"), true);
+
 
                 /* IOANNA */
-                $detect = ilLinkButton::getInstance();
-                //$detect->setUrl($this->ctrl->getLinkTarget($this, "disableLanguageDetection"));
+                /*$detect = ilLinkButton::getInstance();
                 $detect->setCaption($this->toogleButtonAutomatLangDetection("enableLanguageDetection", "disableLanguageDetection"));
-                $this->toolbar->addButtonInstance($detect);
+                $this->toolbar->addButtonInstance($detect);*/
             }
 
+
+
+
+
+            /*$detect = ilLinkButton::getInstance();
+            $detect->setCaption($this->toogleButtonAutomatLangDetection("disableLanguageDetection", "enableLanguageDetection"));
+            $this->toolbar->addButtonInstance($detect);*/
+
+            //$this->tpl->setContent($ltab->getHTML());
+
+            /*$detect = ilButton::getInstance();
+            $detect->setCaption('Detection');
+            $this->toolbar->addButtonInstance($detect);*/
+
+
+            /*$url = $this->ctrl->getLinkTargetByClass("ilobjlanguageextgui", "");
+
+            var_dump($url);
+
+            $this->tpl->setContent("<a href=''>" . $url . "</a>");*/
+
+
+            /*$toolbar = new ilToolbarGUI();
+            $toolbar->addText("Test");*/
+
+            $toolbar = new ilToolbarGUI();
+            $toolbar->addLink('Test Link', '#');
+            /*$this->toolbar->addLink($this->toogleButtonAutomatLangDetection( "enableLanguageDetection", "disableLanguageDetection"), true);*/
+
+
+
+            /*$form = new ilPropertyFormGUI();
+            $form->setFormAction($this->ctrl->getFormAction($this));
+            $form->setTitle($this->lng->txt("language_import_file"));
+            $form->addCommandButton('upload', $this->lng->txt("upload"));
+            $fu = new ilFileInputGUI($this->lng->txt("file"), "userfile");
+            $form->addItem($fu);*/
+
+            //$DIC->tpl->setContent('<p>dghnghgfjgf</p>');
+
+
+            /*$factory = $DIC->ui()->factory();
+            $renderer = $DIC->ui()->renderer();
+
+            $action1 = $DIC->ctrl()->getLinkTarget($this, '#');
+            $action2 = $DIC->ctrl()->getLinkTarget($this, '#');
+
+            $button = $factory->button()->toggle("", $action2, $action1);
+
+            echo $renderer->render([$button]);*/
 
 
 
@@ -168,17 +225,6 @@ class ilObjLanguageFolderGUI extends ilObjectGUI
         global $DIC;
         $factory = $DIC->ui()->factory();
         $renderer = $DIC->ui()->renderer();
-
-        /*$message1 = 'Toggle Button has been turned on';
-        $message2 = 'Toggle Button has been turned off';*/
-        //$form_action = $DIC->ctrl()->getFormActionByClass('iladministrationgui');
-
-        /*$modal = $factory->modal()->interruptive('ON', $message1, $form_action);
-        $modal2 = $factory->modal()->interruptive('OFF', $message2, $form_action);*/
-
-        /*$button = $factory->button()->toggle("", $modal->getShowSignal(), $modal2->getShowSignal())
-            ->withAriaLabel("Switch the State of XY");*/
-
 
         $action1 = $DIC->ctrl()->getLinkTarget($this, $fromStatus);
         $action2 = $DIC->ctrl()->getLinkTarget($this, $toStatus);

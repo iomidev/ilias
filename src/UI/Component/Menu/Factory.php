@@ -32,7 +32,7 @@ interface Factory
      *     and a backlink will be presented to navigate back up the hierarchy.
      *     Entries directly below the current level will be presented as a flat list.
      * context:
-     *   - Drilldown Menus are primarily used in Mainbar-Slates to break down navigational topics into smaller parts.
+     *   - Drilldown Menus are primarily used in Mainbar-Slate to break down navigational topics into smaller parts.
      *
      * rules:
      *   usage:
