@@ -61,8 +61,7 @@ class ilObjLanguageFolderGUI extends ilObjectGUI
                 $detect->setCaption("lng_enable_language_detection");
                 $this->toolbar->addButtonInstance($detect);
                 // Toggle Button for auto language detection
-
-                $this->toolbar->addLink($this->toggleButtonAutomatLangDetection('disableLanguageDetection', 'enableLanguageDetection',false), '');
+                $this->toolbar->addLink($this->toggleButtonAutoLangDetection(false), '');
 
             } else {
 
@@ -71,7 +70,7 @@ class ilObjLanguageFolderGUI extends ilObjectGUI
                 $detect->setCaption("lng_disable_language_detection");
                 $this->toolbar->addButtonInstance($detect);
                 // Toggle Button for auto language detection
-                $this->toolbar->addLink($this->toggleButtonAutomatLangDetection('disableLanguageDetection', 'enableLanguageDetection',true), '');
+                $this->toolbar->addLink($this->toggleButtonAutoLangDetection(true), '');
 
             }
         }
@@ -89,14 +88,14 @@ class ilObjLanguageFolderGUI extends ilObjectGUI
     }
 
     /* Toggle button for auto language detection */
-    private function toggleButtonAutomatLangDetection($fromStatus, $toStatus, $state)
+    private function toggleButtonAutoLangDetection($state)
     {
         global $DIC;
         $factory = $DIC->ui()->factory();
         $renderer = $DIC->ui()->renderer();
 
-        $action1 = $DIC->ctrl()->getLinkTarget($this, $fromStatus);
-        $action2 = $DIC->ctrl()->getLinkTarget($this, $toStatus);
+        $action1 = $DIC->ctrl()->getLinkTarget($this, 'disableLanguageDetection');
+        $action2 = $DIC->ctrl()->getLinkTarget($this, 'enableLanguageDetection');
 
         $button = $factory->button()->toggle("", $action2, $action1, $state);
 
