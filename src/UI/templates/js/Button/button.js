@@ -34,6 +34,7 @@ il.UI.button = il.UI.button || {};
 		var handleToggleClick = function (event, id, on_url, off_url, signals) {
 			var b = $("#" + id);
 			var pressed = b.attr("aria-pressed");
+
 			for (var i = 0; i < signals.length; i++) {
 				var s = signals[i];
 				if (s.event === "click" ||
