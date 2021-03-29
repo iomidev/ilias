@@ -66,20 +66,11 @@ class ilObjLanguageFolderGUI extends ilObjectGUI
 
         if ($this->checkPermissionBool('write')) {
             if (!$this->settings->get('lang_detection')) {
-                $detect = ilLinkButton::getInstance();
-                $detect->setUrl($this->ctrl->getLinkTarget($this, "enableLanguageDetection"));
-                $detect->setCaption("lng_enable_language_detection");
-                $this->toolbar->addButtonInstance($detect);
-                // Toggle Button for auto language detection
+                // Toggle Button for auto language detection (toggle off)
                 $this->toolbar->addComponent($this->toggleButtonAutoLangDetection(false));
 
             } else {
-
-                $detect = ilLinkButton::getInstance();
-                $detect->setUrl($this->ctrl->getLinkTarget($this, "disableLanguageDetection"));
-                $detect->setCaption("lng_disable_language_detection");
-                $this->toolbar->addButtonInstance($detect);
-                // Toggle Button for auto language detection
+                // Toggle Button for auto language detection (toggle on)
                 $this->toolbar->addComponent($this->toggleButtonAutoLangDetection(true));
             }
         }
@@ -107,7 +98,8 @@ class ilObjLanguageFolderGUI extends ilObjectGUI
         }
 
         $toggleButton = $factory->button()->toggle("", $action2, $action1, $state)
-            ->withLabel("Language Detection")->withAriaLabel($ariaLabel);
+            ->withLabel($this->lng->txt("language_detection"))->withAriaLabel($ariaLabel);
+
 
         return $toggleButton;
     }
