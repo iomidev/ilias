@@ -13157,6 +13157,7 @@ note#:#note_comment_notification_salutation#:#Hello %s,
 note#:#note_comment_notification_link#:#Link
 lng#:#lng_enable_language_detection#:#Enable Language Detection
 lng#:#lng_disable_language_detection#:#Disable Language Detection
+lng#:#language_detection#:#Language Detection
 trac#:#trac_mode_content_visited#:#Visited
 trac#:#trac_mode_content_visited_info#:#Learning progress status is set to 'completed' when object has been presented to user.
 trac#:#trac_mode_collection_mobs#:#Collection of Media Objects
