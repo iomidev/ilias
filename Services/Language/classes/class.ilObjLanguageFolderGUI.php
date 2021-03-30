@@ -66,42 +66,22 @@ class ilObjLanguageFolderGUI extends ilObjectGUI
 
         if ($this->checkPermissionBool('write')) {
             if (!$this->settings->get('lang_detection')) {
-                // Toggle Button for auto language detection (toggle off)
-                $this->toolbar->addComponent($this->toggleButtonAutoLangDetection(false));
 
+                // Toggle Button for auto language detection (toggle off)
+                $toggleButton = $DIC->ui()->factory()->button()->toggle("", $DIC->ctrl()->getLinkTarget($this, "enableLanguageDetection"), $DIC->ctrl()->getLinkTarget($this, "disableLanguageDetection"), false)
+                    ->withLabel($this->lng->txt("language_detection"))->withAriaLabel($this->lng->txt("lng_enable_language_detection"));
+                $this->toolbar->addComponent($toggleButton);
             } else {
+
                 // Toggle Button for auto language detection (toggle on)
-                $this->toolbar->addComponent($this->toggleButtonAutoLangDetection(true));
+                $toggleButton = $DIC->ui()->factory()->button()->toggle("", $DIC->ctrl()->getLinkTarget($this, "enableLanguageDetection"), $DIC->ctrl()->getLinkTarget($this, "disableLanguageDetection"), true)
+                    ->withLabel($this->lng->txt("language_detection"))->withAriaLabel($this->lng->txt("lng_disable_language_detection"));
+                $this->toolbar->addComponent($toggleButton);
             }
         }
 
         $ltab = new ilLanguageTableGUI($this, "view", $this->object);
         $this->tpl->setContent($ltab->getHTML());
-    }
-
-    /* Toggle button for auto language detection */
-    private function toggleButtonAutoLangDetection($state)
-    {
-        global $DIC;
-        $factory = $DIC->ui()->factory();
-
-        $action1 = $DIC->ctrl()->getLinkTarget($this, "disableLanguageDetection");
-        $action2 = $DIC->ctrl()->getLinkTarget($this, "enableLanguageDetection");
-
-        if(!$state){
-
-            $ariaLabel = "Toggle Off";
-
-        }else{
-
-            $ariaLabel = "Toggle On";
-        }
-
-        $toggleButton = $factory->button()->toggle("", $action2, $action1, $state)
-            ->withLabel($this->lng->txt("language_detection"))->withAriaLabel($ariaLabel);
-
-
-        return $toggleButton;
     }
 
     /**
